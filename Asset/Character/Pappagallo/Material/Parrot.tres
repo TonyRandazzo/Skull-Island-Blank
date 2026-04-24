@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://y6dji0jd7yj"]
+
+[ext_resource type="Texture2D" uid="uid://dkqxcsa4142ol" path="res://Asset/Character/Pappagallo/Textures/Parrot_vertexcolor.jpg" id="1_kd2hb"]
+[ext_resource type="Texture2D" uid="uid://dxafu7t7h5pq1" path="res://Asset/Character/Pappagallo/Textures/Parrot_normal.jpg" id="2_xfnre"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_kd2hb")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_xfnre")

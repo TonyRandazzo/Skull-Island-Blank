@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://rx2q6n6yxku2"]
+
+[ext_resource type="Texture2D" uid="uid://dxt0os8jnpi57" path="res://Asset/Textures/Texture Checker.png" id="1_lp0f0"]
+[ext_resource type="PackedScene" uid="uid://dr147c76lidgj" path="res://Asset/Environment/Environment.tscn" id="1_un65c"]
+[ext_resource type="PackedScene" uid="uid://b18fh8afc83uv" path="res://Asset/Character/Raev2/Player Raev2.tscn" id="1_vcxqn"]
+[ext_resource type="PackedScene" uid="uid://b0du5jd2ungx3" path="res://Asset/Character/Fornaio/Fornaio.tscn" id="4_h1cc6"]
+[ext_resource type="PackedScene" uid="uid://cnyw41o7uhu24" path="res://Asset/Character/Scimmia indigena1/scimmia_indigena_1.tscn" id="5_jq1m1"]
+[ext_resource type="PackedScene" uid="uid://cmufphnu3lu8p" path="res://Asset/Character/Pappagallo/trespolo.tscn" id="6_ci7ik"]
+[ext_resource type="PackedScene" uid="uid://cthxm1ph58o4x" path="res://Asset/Character/Pappagallo/parrot.tscn" id="7_lp0f0"]
+[ext_resource type="PackedScene" uid="uid://cmcb15g1inikv" path="res://Asset/Mesh/Sword/sword.tscn" id="8_lp0f0"]
+[ext_resource type="PackedScene" uid="uid://c5efxbu2pw60g" path="res://gui.tscn" id="9_sjdkr"]
+[ext_resource type="PackedScene" uid="uid://c6l2tbo80ghls" path="res://scenes/dialogue_ui.tscn" id="10_864u0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjdkr"]
+cull_mode = 2
+albedo_texture = ExtResource("1_lp0f0")
+metallic_specular = 0.0
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_xij1y"]
+size = Vector2(50, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6u2ri"]
+data = PackedVector3Array(25, -25, 0, -25, -25, 0, 25, 25, 0, -25, -25, 0, -25, 25, 0, 25, 25, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_un65c"]
+size = Vector3(1, 5, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fe842"]
+data = PackedVector3Array(-0.5, 2.5, 25, 0.5, 2.5, 25, -0.5, -2.5, 25, 0.5, 2.5, 25, 0.5, -2.5, 25, -0.5, -2.5, 25, 0.5, 2.5, -25, -0.5, 2.5, -25, 0.5, -2.5, -25, -0.5, 2.5, -25, -0.5, -2.5, -25, 0.5, -2.5, -25, 0.5, 2.5, 25, 0.5, 2.5, -25, 0.5, -2.5, 25, 0.5, 2.5, -25, 0.5, -2.5, -25, 0.5, -2.5, 25, -0.5, 2.5, -25, -0.5, 2.5, 25, -0.5, -2.5, -25, -0.5, 2.5, 25, -0.5, -2.5, 25, -0.5, -2.5, -25, 0.5, 2.5, 25, -0.5, 2.5, 25, 0.5, 2.5, -25, -0.5, 2.5, 25, -0.5, 2.5, -25, 0.5, 2.5, -25, -0.5, -2.5, 25, 0.5, -2.5, 25, -0.5, -2.5, -25, 0.5, -2.5, 25, 0.5, -2.5, -25, -0.5, -2.5, -25)
+
+[node name="Blank" type="Node3D" unique_id=1156160382]
+
+[node name="Ground" type="Node3D" parent="." unique_id=2079250268]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=522523397]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_sjdkr")
+mesh = SubResource("QuadMesh_xij1y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D" unique_id=761013080]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D/StaticBody3D" unique_id=1120318171]
+shape = SubResource("ConcavePolygonShape3D_6u2ri")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Ground" unique_id=1966775797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_sjdkr")
+mesh = SubResource("BoxMesh_un65c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D2" unique_id=1715925938]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D2/StaticBody3D" unique_id=790206706]
+shape = SubResource("ConcavePolygonShape3D_fe842")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Ground" unique_id=450021783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_sjdkr")
+mesh = SubResource("BoxMesh_un65c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D3" unique_id=1259066864]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D3/StaticBody3D" unique_id=1623624166]
+shape = SubResource("ConcavePolygonShape3D_fe842")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ground" unique_id=936049059]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.5, 25)
+material_override = SubResource("StandardMaterial3D_sjdkr")
+mesh = SubResource("BoxMesh_un65c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D4" unique_id=932279573]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D4/StaticBody3D" unique_id=1516180977]
+shape = SubResource("ConcavePolygonShape3D_fe842")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Ground" unique_id=1935281893]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.5, -25)
+material_override = SubResource("StandardMaterial3D_sjdkr")
+mesh = SubResource("BoxMesh_un65c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D5" unique_id=967385181]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D5/StaticBody3D" unique_id=1076883307]
+shape = SubResource("ConcavePolygonShape3D_fe842")
+
+[node name="Environment" parent="." unique_id=1209765871 instance=ExtResource("1_un65c")]
+
+[node name="Player Raev2" parent="." unique_id=691123331 instance=ExtResource("1_vcxqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="Fornaio" parent="." unique_id=1096278910 instance=ExtResource("4_h1cc6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 10)
+
+[node name="scimmia indigena1" parent="." unique_id=482075585 instance=ExtResource("5_jq1m1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.223156, 0, -15.97163)
+
+[node name="Trespolo" parent="." unique_id=1963336767 instance=ExtResource("6_ci7ik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2.9143682e-06, 10)
+
+[node name="Parrot" parent="." unique_id=957916642 instance=ExtResource("7_lp0f0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.4, 1.036, 10)
+
+[node name="Sword" parent="." unique_id=224521979 instance=ExtResource("8_lp0f0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.059, 5)
+
+[node name="GUI" parent="." unique_id=1447426849 instance=ExtResource("9_sjdkr")]
+target = NodePath("../Player Raev2")
+
+[node name="HUD" type="Node" parent="." unique_id=759585101]
+
+[node name="DialogueUI" parent="HUD" unique_id=1622418932 instance=ExtResource("10_864u0")]

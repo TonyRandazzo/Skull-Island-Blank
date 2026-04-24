@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bl18asxn3uaa3"]
+
+[ext_resource type="Texture2D" uid="uid://dup5smw7mjy26" path="res://Asset/Character/Raev2/Textures/Raev2-2K.jpg" id="1_5vu6v"]
+[ext_resource type="Texture2D" uid="uid://d0ps6jatu4ne3" path="res://Asset/Character/Raev2/Textures/Raev2-Nomal-2K.jpg" id="2_j11q0"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_5vu6v")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_j11q0")

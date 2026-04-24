@@ -1,0 +1,55 @@
+{
+  "id": "npc1_primo_incontro",
+  "nodes": {
+	"start": {
+	  "text": "Ciao, viaggiatore. Hai visto un lupo mannaro da queste parti?",
+	  "responses": [
+		{
+		  "text": "Sì, laggiù nella foresta!",
+		  "next_node": "lupo_si",
+		  "once": false
+		},
+		{
+		  "text": "No, non ho visto niente.",
+		  "next_node": "lupo_no",
+		  "once": false
+		},
+		{
+		  "text": "Non voglio parlare con te.",
+		  "next_node": "fine_maleducato",
+		  "once": true
+		}
+	  ]
+	},
+	"lupo_si": {
+	  "text": "Grazie! Vado subito a ucciderlo.",
+	  "responses": [
+		{
+		  "text": "Buona fortuna!",
+		  "next_node": "fine_normale",
+		  "once": false
+		}
+	  ]
+	},
+	"lupo_no": {
+	  "text": "Peccato. Se lo vedi, fammelo sapere.",
+	  "responses": [
+		{
+		  "text": "Certo.",
+		  "next_node": "fine_normale",
+		  "once": false
+		}
+	  ]
+	},
+	"fine_maleducato": {
+	  "text": "Uh, che maleducato. Addio.",
+	  "responses": [],
+	  "end": true
+	},
+	"fine_normale": {
+	  "text": "Alla prossima.",
+	  "responses": [],
+	  "end": true
+	}
+  }
+}

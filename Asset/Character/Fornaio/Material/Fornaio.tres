@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp6eipyb1d5ol"]
+
+[ext_resource type="Texture2D" uid="uid://ph246nap34gh" path="res://Asset/Character/Fornaio/Textures/fornaio_vertexcolor.jpg" id="1_s5yq7"]
+[ext_resource type="Texture2D" uid="uid://cy8p0f83r2iss" path="res://Asset/Character/Fornaio/Textures/fornaio_normal.jpg" id="2_uuyv8"]
+
+[resource]
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_s5yq7")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_uuyv8")

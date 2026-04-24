@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ttq7xubf2jh5"]
+
+[ext_resource type="Texture2D" uid="uid://ctvna1w24tp41" path="res://Asset/Textures/Wood02/Wood02_Base_Color.jpg" id="1_t4k6i"]
+[ext_resource type="Texture2D" uid="uid://bvm0iglg308cl" path="res://Asset/Textures/Wood02/Wood02_ARM.jpg" id="2_fy5qs"]
+[ext_resource type="Texture2D" uid="uid://d0t8nlh6suggn" path="res://Asset/Textures/Wood02/Wood02_Normal.jpg" id="3_d0xdn"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_t4k6i")
+metallic_specular = 0.0
+metallic_texture = ExtResource("2_fy5qs")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_fy5qs")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_d0xdn")
+ao_enabled = true
+ao_texture = ExtResource("2_fy5qs")

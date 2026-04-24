@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d2iomocq560r2"]
+
+[ext_resource type="Texture2D" uid="uid://djxpamesa2d87" path="res://Asset/Character/Scimmia indigena1/Textures/scimmia1_vertexcolor.jpg" id="1_vsvdu"]
+[ext_resource type="Texture2D" uid="uid://duyrt4h1a6afn" path="res://Asset/Character/Scimmia indigena1/Textures/scimmia1_normal.jpg" id="2_ra0jt"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_vsvdu")
+metallic_specular = 0.0
+normal_enabled = true
+normal_texture = ExtResource("2_ra0jt")

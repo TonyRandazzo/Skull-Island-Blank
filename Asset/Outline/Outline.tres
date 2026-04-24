@@ -1,0 +1,15 @@
+[gd_resource type="QuadMesh" format=3 uid="uid://mkp2v3ca14rr"]
+
+[ext_resource type="Shader" uid="uid://c5nioscsc7fbn" path="res://Asset/Outline/Outline2.gdshader" id="1_7fi4e"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yptoa"]
+render_priority = 0
+shader = ExtResource("1_7fi4e")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/shadow_thickness = 1.0
+shader_parameter/max_outline_distance = 50.0
+shader_parameter/outline_fade_range = 10.0
+
+[resource]
+material = SubResource("ShaderMaterial_yptoa")
+size = Vector2(2, 2)

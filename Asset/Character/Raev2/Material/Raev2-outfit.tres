@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfesmfek30ii8"]
+
+[ext_resource type="Texture2D" uid="uid://denk4wpk10sl2" path="res://Asset/Character/Raev2/Textures/Raev2outfit_albedo-2K.jpg" id="1_c2hpv"]
+[ext_resource type="Texture2D" uid="uid://bg7eeeabiwgkh" path="res://Asset/Character/Raev2/Textures/Raev2outfit_mixmap-2K.jpg" id="2_8ssna"]
+[ext_resource type="Texture2D" uid="uid://b51vlpsyx48sj" path="res://Asset/Character/Raev2/Textures/Raev2outfit_normal-2K.jpg" id="3_q2vj6"]
+
+[resource]
+cull_mode = 2
+albedo_texture = ExtResource("1_c2hpv")
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("2_8ssna")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("1_c2hpv")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_q2vj6")
+ao_enabled = true
+ao_texture = ExtResource("1_c2hpv")

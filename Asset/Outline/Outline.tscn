@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb88l5lqr6ewt"]
+
+[ext_resource type="QuadMesh" uid="uid://mkp2v3ca14rr" path="res://Asset/Outline/Outline.tres" id="1_eu4gm"]
+
+[node name="Outline" type="Node3D"]
+
+[node name="Outline" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_eu4gm")

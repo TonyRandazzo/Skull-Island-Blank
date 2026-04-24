@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5efxbu2pw60g"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_2coce"]
+[ext_resource type="Shader" path="res://minimap.gdshader" id="2_7pk01"]
+[ext_resource type="Texture2D" uid="uid://cvh1xqijep8bw" path="res://Bussola_cornice.png" id="2_cqm8x"]
+[ext_resource type="Texture2D" uid="uid://c3kbiipcm0se" path="res://Bussola.png" id="3_pblja"]
+[ext_resource type="Texture2D" uid="uid://bo0sv1kqe4rt5" path="res://Raev_portrait_full.png" id="5_2p7oq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45ogm"]
+shader = ExtResource("2_7pk01")
+shader_parameter/radius = 0.5
+shader_parameter/smoothness = 0.01
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource("1_2coce")
+
+[node name="MinimapContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_45ogm")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 200.0
+grow_horizontal = 0
+stretch = true
+
+[node name="MinimapViewport" type="SubViewport" parent="MinimapContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_update_mode = 4
+
+[node name="Cornice" type="TextureRect" parent="MinimapContainer/MinimapViewport"]
+clip_children = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_right = 1760.0
+offset_bottom = 1960.0
+grow_horizontal = 0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_cqm8x")
+
+[node name="Bussola" type="TextureRect" parent="MinimapContainer/MinimapViewport"]
+offset_right = 1960.0
+offset_bottom = 1960.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_pblja")
+
+[node name="PlayerIndicator" type="TextureRect" parent="MinimapContainer/MinimapViewport"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2p7oq")
+expand_mode = 1
+
+[node name="MinimapCamera" type="Camera3D" parent="MinimapContainer/MinimapViewport"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 2000, 0)
+projection = 1
+current = true
+size = 10.0
